@@ -1,0 +1,84 @@
+<ion-view view-title="Aspiradora">
+
+
+    <ion-content class="padding">
+
+        <div  class="bar bar-header bar-balanced">
+            <h1 class="title">Aspiradora Robot</h1>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <ion-toggle ng-click="toggleControl()"  ng-model="controlToggle">
+            Automático
+        </ion-toggle>
+
+        <div class="card">
+            <div  class="item item-text-wrap">
+
+                <h2 class="title" ng-class="{black:!controlToggle, gray:controlToggle}" style="font-family: Helvetica Neue;text-align:center">Control</h2>
+
+                <div style="padding-left:38.5%"> 
+                    <a ng-click="write(0)" ng-disabled="controlToggle" class="button icon-right ion-arrow-up-a button-clear button-dark"></a>  
+                </div>
+                <div style="float:left;padding-left:33%"> 
+                    <a ng-click="write(1)" ng-disabled="controlToggle" class="button icon-left ion-arrow-left-a button-clear button-dark"></a>
+                </div>
+                <div style="float:left">
+                    <a ng-click="write(2)" ng-disabled="controlToggle" class="button icon-right ion-arrow-right-a button-clear button-dark"></a>
+                </div>
+                <div style="clear:both;padding-left:38.5%"> 
+                    <a ng-click="write(3)" ng-disabled="controlToggle" class="button icon-right ion-arrow-down-a button-clear button-dark"></a>  
+
+                </div>
+            </div>
+        </div>  
+
+        <button ng-click="enableBluetooth()" class="button button-full button-royal">
+            Habilitar Bluetooth
+        </button>
+
+        <button ng-click="connectToDevice()" class="button button-full button-royal">
+            Conectar
+        </button>
+
+        <button ng-click="isConnected()" class="button button-full button-royal">
+            Verificar conexión
+        </button>
+
+        <button  ng-click="write( 4 )" class="button button-full button-royal">
+            Escribir
+        </button>
+
+        <button ng-click="read()" class="button button-full button-royal">
+            Leer
+        </button>
+
+        <button ng-click="discover()" class="button button-full button-royal">
+            Descubrir nuevos dispositivos
+        </button>
+
+        <button ng-click="list()" class="button button-full button-royal">
+            Enlistar
+        </button>
+
+        <!--
+<button ng-click="enableBluetooth()">Enable Bluetooth</button>
+<button ng-click="connectToDevice()">{{connectionStatus}}</button>
+<button ng-click="discover()">Discover</button>
+<button ng-click="list()">List</button>
+<button ng-click="write()">Write1</button>
+<button ng-click="read()">Read</button>
+<button ng-click="isConnected()">Verify Connection</button>
+<button ng-click="suscribe()">Suscribe</button>
+-->
+
+
+    </ion-content>
+
+    <ion-footer-bar  class="bar-balanced">
+        <h1 style="text-align:center" class="title">KeMaNi © 2016</h1>
+    </ion-footer-bar>
+</ion-view>
