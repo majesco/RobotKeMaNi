@@ -38,17 +38,16 @@ void darVuelta() {
 }
 
 
-const byte NUMBER_OF_STATES = 5; //how many states are we cycling through?
+const byte NUMBER_OF_STATES = 5; //Cantidad de ciclos
 
-//initialize states
+//Estados
 State Avanzar = State(avanzar);
 State ControlManual = State(controlManual);
 State Obstaculo = State(obstaculo);
 State Revisar = State(revisar);
 State DarVuelta = State(darVuelta);
 
-FSM aspiradora = FSM(Avanzar);     //initialize state machine, start in state: Avanzar
-
+FSM aspiradora = FSM(Avanzar);     //Primer estado es Avanzar
 
 void setup() {
   /*Nada aun*/
